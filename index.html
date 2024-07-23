@@ -30,12 +30,14 @@
             body.style.backgroundColor = 'white';
             sun.style.transform = 'translateY(0px)';
             moon.style.transform = 'translateY(40px)';
+            container.style.boxShadow = 'none';
             }else{
                 element.style.transform = 'translateX(150%)';
                 container.style.backgroundColor = 'black';
                 body.style.backgroundColor = 'rgba(0, 0, 0, 0.874)';
                 sun.style.transform = 'translateY(40px)';
                 moon.style.transform = 'translateY(0px)';
+                container.style.boxShadow = '0px 0px 10px whitesmoke';
             }
             toggled=!toggled;
         });
