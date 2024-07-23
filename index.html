@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body id="body">
+    <div id="container" class="container">
+        <div class="moon"><i class="fa-solid fa-moon"></i></div>
+        <div id="element" class="element"></div>
+        <div class="sun"><i class="fa-solid fa-sun"></i></div>
+    </div>
+
+
+    <script>
+        const container = document.getElementById('container');
+        const element = document.getElementById('element');
+        const body = document.getElementById('body');
+        let toggled = false;
+        
+        container.addEventListener('click',()=>{
+            if(toggled){
+            element.style.transform = 'translateX(0)';
+            container.style.backgroundColor = 'rgba(154, 151, 151, 0.788)';
+            body.style.backgroundColor = 'white';
+            }else{
+                element.style.transform = 'translateX(150%)';
+                container.style.backgroundColor = 'black';
+                body.style.backgroundColor = 'rgba(0, 0, 0, 0.874)';
+            }
+            toggled=!toggled;
+        });
+
+    </script>
+</body>
+</html>
