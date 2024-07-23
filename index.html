@@ -9,9 +9,9 @@
 </head>
 <body id="body">
     <div id="container" class="container">
-        <div class="moon"><i class="fa-solid fa-moon"></i></div>
+        <div id="moon" class="moon"><i class="fa-solid fa-moon"></i></div>
         <div id="element" class="element"></div>
-        <div class="sun"><i class="fa-solid fa-sun"></i></div>
+        <div id="sun" class="sun"><i class="fa-solid fa-sun"></i></div>
     </div>
 
 
@@ -19,6 +19,8 @@
         const container = document.getElementById('container');
         const element = document.getElementById('element');
         const body = document.getElementById('body');
+        const sun = document.getElementById('sun');
+        const moon = document.getElementById('moon');
         let toggled = false;
         
         container.addEventListener('click',()=>{
@@ -26,10 +28,14 @@
             element.style.transform = 'translateX(0)';
             container.style.backgroundColor = 'rgba(154, 151, 151, 0.788)';
             body.style.backgroundColor = 'white';
+            sun.style.transform = 'translateY(0px)';
+            moon.style.transform = 'translateY(40px)';
             }else{
                 element.style.transform = 'translateX(150%)';
                 container.style.backgroundColor = 'black';
                 body.style.backgroundColor = 'rgba(0, 0, 0, 0.874)';
+                sun.style.transform = 'translateY(40px)';
+                moon.style.transform = 'translateY(0px)';
             }
             toggled=!toggled;
         });
